@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+const { render } = require('ejs');
 const { response, request } = require('express');
 const express = require('express');
 // const mysql = require('mysql');
@@ -42,6 +43,7 @@ router.post('/regi', async (req, res) => {
 router.get('/comentarios', (request, response) => {
   response.render('comentarios.html');
 });
+
 router.post('/comen', async (req, res) => {
   const {
     comentario,
@@ -74,6 +76,24 @@ router.post('/pedi', async (req, res) => {
   });
 });
 
+// eslint-disable-next-line no-shadow
+router.get('/pedi', async (request, response) => {
+  await connection.query('SELECT * FROM pedidos', (err, rows) => {
+    if (err) {
+      throw err;
+    }
+    response.render('pedido.html', { pedidos: rows });
+  });
+});
+
+router.get('/coment', async (request, response) => {
+  await connection.query('SELECT * FROM comentarios', (err, rows) => {
+    if (err) {
+      throw err;
+    }
+    response.render('comentario.html', { comentario: rows });
+  });
+});
 // eslint-disable-next-line no-shadow
 router.get('*', (request, response) => {
   response.status(404).send('NOT FOUND');

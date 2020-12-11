@@ -12,22 +12,23 @@
             
             <form class="card-body" action="/pedi" method="post">
               <h3 class="card-title"> Comentarios </h3>
+              
               <div class="form-group mx-auto ">
+                <label>Pedido</label>
                 <textarea name="pedido" rows="10" cols="30"></textarea>
               </div>
-              
+              <label>Direccion de envio</label>
               <div class="form-group mx-auto ">
                 <input name="direccion" type="text" class="form-control">
               </div>
-
+              <label>Telefono</label>
               <div class="form-group mx-auto ">
                 <input name="telefono" type="number" class="form-control">
               </div>
-
+              <label>Nombre</label>
               <div class="form-group mx-auto ">
                 <input name="nombre" type="text" class="form-control">
               </div>
-
               <input type="submit" class="btn btn-primary" onclick="alertaPedido()">
             </form>
           </div>

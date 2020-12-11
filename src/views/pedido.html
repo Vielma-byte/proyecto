@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include ('partials/head.html')  %> 
+    </head>
+    <body>
+        <%- include ('partials/navigation.html') %>
+        <table class="table table-bordered table-hover">
+           <thead>
+            <tr>
+                <th>id pedido</th>
+                <th>pedido</th>
+                <th>direccion de envio</th>
+                <th>telefono contacto</th>
+                <th>nombre de entrega</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (var i = 0; i < pedidos.length; i++) {%>
+                <tr>
+                    <td><%= i + 1 %></td>
+                    <td><%=pedidos[i].pedido%></td>
+                    <td><%=pedidos[i].direccion%></td>
+                    <td><%=pedidos[i].telefono%></td>
+                    <td><%=pedidos[i].nombre%></td>
+                </tr>
+            <%  } %> 
+            </tbody>
+            </table>
+
+
+
+        <%- include ('partials/footer.html') %>
+    </body>
+</html>
