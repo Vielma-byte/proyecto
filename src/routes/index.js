@@ -86,6 +86,7 @@ router.get('/pedi', async (request, response) => {
   });
 });
 
+// eslint-disable-next-line no-shadow
 router.get('/coment', async (request, response) => {
   await connection.query('SELECT * FROM comentarios', (err, rows) => {
     if (err) {
