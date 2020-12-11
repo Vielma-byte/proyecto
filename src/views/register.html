@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ('partials/head.html') %>
+  </head>
+  <body>
+    <%- include ('partials/navigation.html') %>
+
+      <div class="col-md-6 mt-4 card mx-auto ">
+        <form class="card-body" action="/regi" method="post">
+          <h3 class="card-title">Register</h3>
+          <div class="form-group">
+            <input name="nombre" type="text" class="form-control" placeholder="nombre">
+          </div>
+          <div class="form-group">
+            <input name="correo" type="text" class="form-control" placeholder="correo">
+          </div>
+          <div class="form-group">
+            <input name="contraseña" type="password" class="form-control" placeholder="contraseña">
+          </div>
+          <input type="submit" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <%- include('partials/head.html')  %> 
+    </head>
+    <body>
+        <%- include ('partials/navigation.html') %>
+
+        <div class="col-md-3 mt-4 card mx-auto ">
+            <form class="card-body" action="/comen" method="post">
+              <h3 class="card-title"> Comentarios </h3>
+              <div class="form-group mx-auto ">
+                <textarea name="comentario" placeholder=" Escribe aqui tu comentario " rows="10" cols="30"></textarea>
+              </div>
+              <input type="submit" class="btn btn-primary">
+            </form>
+          </div>
+        </div>
+
+    </body>
+</html>
